@@ -1,0 +1,350 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Header */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    position: relative;
+    height: 175px;
+}
+.header-image-container {
+    position: absolute;
+    left: 0px;
+    top: 0%;
+    width: 175px;
+    height: auto;
+}
+
+    .header-image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+.logo{
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 85px;
+}
+
+.nav-links {
+    position: absolute;
+    right: 5%;
+    bottom: 15px;
+}
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-left: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #555;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+/* Main Content */
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-container video {
+    width: calc(100% - 40px);
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 5px auto;
+}
+
+
+
+.recruitment-section {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+}
+
+.recruitment-box {
+}
+
+    .recruitment-box h2 {
+        font-size: 120px;
+        color: #333;
+        margin-bottom: 20px;
+        background-color: #1fcc04;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 5px #218603 inset;
+        text-align: center;
+        width: 1500px;
+    }
+
+    .recruitment-box p {
+        font-size: 22px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+/* Content Sections */
+.content-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+.blog-section, .activity-section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+    .blog-section h3, .activity-section h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+.blog-post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .blog-post .date {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .blog-post .title {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+.history-link {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity-item {
+    background-color: #8A2BE2; /* Purple color */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #e6ffe6;
+    color: #000;
+    padding: 20px;
+    position: relative; /* 子要素の絶対配置の基準となる */
+    height: 175px; /* フッター全体の高さを固定 */
+    display: flex; /* フッターの子要素をFlexboxで配置 */
+    flex-direction: column; /* 子要素を縦方向に並べる */
+    justify-content: center; /* 主軸（縦方向）で中央に配置 */
+    align-items: center; /* 交差軸（横方向）で中央に配置 */
+}
+
+.footer-links {
+    margin-bottom: 10px; /* アイコンとの間に少し余白 */
+    /* リンク自体は footer の align-items: center で中央に寄る */
+}
+
+    .footer-links a {
+        color: #000;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 30px;
+    }
+
+.footer-icons {
+    display: flex; /* アイコンを横に並べる */
+    justify-content: center; /* アイコンを中央に配置 */
+    align-items: center;
+    gap: 10px; /* アイコン間の隙間 */
+    margin-bottom: 15px; /* 必要であれば下マージン */
+}
+
+/* 個別のアイコン画像サイズ */
+.instagram-icon img,
+.gmail-icon img {
+    width: 90px; /* 画像のように大きく */
+    height: 90px;
+}
+
+/* 情報サークルと./(DotSlash)のテキスト */
+.footer-bottom {
+    /* display: flex; や justify-content などは不要になります */
+    position: absolute; /* footer を基準に絶対配置 */
+    top: 50%; /* 親要素の高さの50%の位置に移動 */
+    transform: translateY(-50%); /* 要素自体の高さの50%分上にずらして中央に配置 */
+    right: 50px; /* 右から50pxの位置に配置 */
+    /* テキストが改行されないように */
+    white-space: nowrap;
+    display: flex; /* pタグを横に並べるため */
+    gap: 15px; /* pタグ間の隙間 */
+    align-items: center; /* pタグの高さが違う場合でも中央に揃える */
+}
+
+    .footer-bottom p {
+        font-size: 36px;
+    }
+
+
+}
+
+
+/* --- スマホ対応 (768px以下) --- */
+@media (max-width: 768px) {
+    /* ヘッダー */
+    .header-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .logo,
+    .nav-links {
+        position: static;
+        width: auto;
+        margin: 0;
+    }
+    .header-image-container {
+        width: 70px; /* 例えば、幅を100pxに設定 */
+        height: auto; /* 高さは自動調整で縦横比を維持 */
+        position: static;
+        margin: 0;
+    }
+
+    .logo {
+        font-size: 40px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .nav-links {
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+        .nav-links ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            font-size: 20px;
+        }
+
+    /* メインコンテンツ全体 */
+    main {
+        padding: 10px;
+    }
+
+    /* 紹介動画 */
+    .video-container video {
+        width: 100%;
+    }
+
+    /* 募集セクション */
+    .recruitment-box h2 {
+        font-size: 40px;
+        padding: 20px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 3px #218603 inset;
+    }
+
+    .recruitment-box p {
+        font-size: 16px;
+    }
+
+    /* ブログ・活動内容 */
+    .content-sections {
+        grid-template-columns: 1fr; /* 1列に並び替え */
+        max-width: 100%; /* 幅を画面いっぱいに */
+    }
+
+    /* フッター */
+    footer {
+        height: auto;
+    }
+
+    .footer-icons {
+        flex-wrap: wrap; /* アイコンを折り返す */
+    }
+
+    .instagram-icon img, .gmail-icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .owl-icon-placeholder {
+        display: none; /* スマホではフクロウアイコンを非表示 */
+    }
+}
